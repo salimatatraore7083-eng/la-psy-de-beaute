@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color"
+content="#000000">
+
+<link rel="manifest"
+href="manifest.json">
+
+<link rel="apple-touch-icon"
+href="images/icon-192.png">
+
+<title>Laura – La PSY De Beauté</title>
+
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#000;
+    color:white;
+    padding-bottom:75px;
+}
+
+:root{
+    --black:#000;
+    --dark:#0d0d0d;
+    --gold:#d4af37;
+    --gold2:#f5d76e;
+    --pink:#ff69b4;
+    --gray:#aaa;
+    --whatsapp:#25D366;
+}
+
+
+/* ================= HEADER ================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#000;
+    border-bottom:1px solid #594b20;
+}
+
+.top-header{
+    height:68px;
+    display:flex;
+    align-items:center;
+    padding:8px 15px;
+}
+
+.logo-header{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid var(--gold);
+}
+
+.brand{
+    flex:1;
+    margin-left:10px;
+}
+
+.brand h3{
+    color:var(--gold);
+    font-size:15px;
+}
+
+.brand span{
+    color:var(--pink);
+    font-size:10px;
+}
+
+.menu-button{
+    background:none;
+    border:0;
+    color:var(--gold);
+    font-size:28px;
+}
+
+
+/* ================= MENU ================= */
+
+.mobile-menu{
+    display:none;
+    background:#080808;
+    padding:8px 18px;
+}
+
+.mobile-menu.active{
+    display:block;
+}
+
+.mobile-menu a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:12px 4px;
+    border-bottom:1px solid #222;
+}
+
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:88vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px 18px;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.65),
+        rgba(0,0,0,.95)
+    ),
+    url("images/laura_portrait_1.jpg")
+    center/cover no-repeat;
+}
+
+.hero-content{
+    max-width:650px;
+}
+
+.hero-logo{
+    width:135px;
+    height:135px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid var(--gold);
+    margin-bottom:20px;
+}
+
+.hero h1{
+    color:var(--gold);
+    font-size:34px;
+    line-height:1.15;
+}
+
+.slogan{
+    color:var(--pink);
+    font-weight:bold;
+    font-size:17px;
+    margin:15px 0;
+}
+
+.hero-description{
+    color:#ddd;
+    margin-bottom:25px;
+}
+
+.buttons{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.btn{
+    display:block;
+    padding:14px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    text-align:center;
+    border:0;
+}
+
+.btn-gold{
+    background:var(--gold);
+    color:#000;
+}
+
+.btn-whatsapp{
+    background:var(--whatsapp);
+    color:white;
+}
+
+
+/* ================= SECTIONS ================= */
+
+section{
+    padding:55px 18px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:28px;
+}
+
+.section-title h2{
+    color:var(--gold);
+    font-size:28px;
+}
+
+.section-title p{
+    color:var(--gray);
+    font-size:14px;
+    margin-top:7px;
+}
+
+
+/* ================= SERVICES ================= */
+
+.services{
+    background:#050505;
+}
+
+.services-intro{
+    max-width:650px;
+    margin:0 auto 25px;
+    text-align:center;
+    color:#ddd;
+}
+
+.services-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:16px;
+    max-width:750px;
+    margin:auto;
+}
+
+.service-card{
+    background:#111;
+    border:1px solid #292929;
+    border-left:4px solid var(--gold);
+    border-radius:16px;
+    padding:23px;
+}
+
+.service-icon{
+    font-size:36px;
+}
+
+.service-card h3{
+    color:var(--gold);
+    margin:8px 0;
+}
+
+.service-card p{
+    color:#ccc;
+    font-size:14px;
+}
+
+
+/* ================= GALERIE ================= */
+
+.gallery{
+    background:#000;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+}
+
+.gallery-item{
+    height:210px;
+    position:relative;
+    overflow:hidden;
+    border-radius:13px;
+    border:1px solid #292929;
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.gallery-caption{
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:18px 8px 8px;
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.9)
+    );
+    color:var(--gold);
+    font-weight:bold;
+}
+
+
+/* ================= VIDEOS ================= */
+
+.videos{
+    background:#070707;
+}
+
+.video-list{
+    max-width:700px;
+    margin:auto;
+}
+
+.video-card{
+    background:#111;
+    border:1px solid #303030;
+    border-radius:17px;
+    padding:12px;
+    margin-bottom:22px;
+}
+
+.video-wrapper{
+    background:#000;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+.video-wrapper video{
+    width:100%;
+    height:auto;
+    display:block;
+    background:#000;
+}
+
+.video-info{
+    padding:13px 5px 5px;
+}
+
+.video-info h3{
+    color:var(--gold);
+}
+
+.video-info p{
+    color:#aaa;
+    font-size:13px;
+}
+
+
+/* ================= AUDIO ================= */
+
+.audio-section{
+    background:#000;
+}
+
+.audio-box{
+    max-width:650px;
+    margin:auto;
+    background:#111;
+    border:1px solid var(--gold);
+    border-radius:18px;
+    padding:25px;
+    text-align:center;
+}
+
+.audio-icon{
+    font-size:45px;
+}
+
+.audio-box h3{
+    color:var(--gold);
+}
+
+.audio-box p{
+    color:#aaa;
+    margin:10px 0 18px;
+}
+
+audio{
+    width:100%;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about{
+    background:#000;
+}
+
+.about-box{
+    max-width:700px;
+    margin:auto;
+    background:#0e0e0e;
+    border:1px solid #292929;
+    border-radius:19px;
+    padding:27px;
+}
+
+.about-photo{
+    width:155px;
+    height:155px;
+    border-radius:50%;
+    object-fit:cover;
+    display:block;
+    margin:0 auto 22px;
+    border:3px solid var(--gold);
+}
+
+.about-box p{
+    color:#ddd;
+    font-size:15px;
+    margin-bottom:17px;
+}
+
+.highlight{
+    color:var(--pink);
+    font-weight:bold;
+}
+
+
+/* ================= RENDEZ-VOUS ================= */
+
+.appointment{
+    background:#050505;
+}
+
+.appointment-box{
+    max-width:570px;
+    margin:auto;
+    background:#111;
+    border:1px solid var(--gold);
+    border-radius:19px;
+    padding:25px;
+}
+
+label{
+    display:block;
+    color:var(--gold);
+    margin:15px 0 6px;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:13px;
+    border-radius:8px;
+    border:1px solid #333;
+    background:#050505;
+    color:white;
+}
+
+textarea{
+    min-height:100px;
+}
+
+.submit-btn{
+    width:100%;
+    margin-top:20px;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact{
+    background:#050505;
+}
+
+.contact-card{
+    max-width:600px;
+    margin:auto;
+}
+
+.contact-item{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:18px;
+    background:#111;
+    border-radius:14px;
+    margin-bottom:12px;
+    border:1px solid #252525;
+}
+
+.contact-icon{
+    font-size:27px;
+}
+
+.contact-item strong{
+    display:block;
+    color:var(--gold);
+}
+
+.contact-item a,
+.contact-item span{
+    color:#ddd;
+    text-decoration:none;
+    font-size:14px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#000;
+    border-top:1px solid #222;
+    padding:32px 18px;
+    text-align:center;
+}
+
+footer h3{
+    color:var(--gold);
+}
+
+footer p{
+    color:#888;
+    font-size:12px;
+}
+
+.footer-slogan{
+    color:var(--pink) !important;
+    font-weight:bold;
+}
+
+
+/* ================= BOTTOM NAV ================= */
+
+.bottom-nav{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    height:68px;
+    background:#000;
+    border-top:1px solid #594b20;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    z-index:2000;
+}
+
+.bottom-nav a{
+    color:#aaa;
+    text-decoration:none;
+    font-size:10px;
+    text-align:center;
+}
+
+.bottom-nav a div{
+    font-size:21px;
+}
+
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp-floating{
+    position:fixed;
+    right:17px;
+    bottom:84px;
+    width:57px;
+    height:57px;
+    border-radius:50%;
+    background:var(--whatsapp);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    text-decoration:none;
+    z-index:1500;
+}
+
+
+/* ================= DESKTOP ================= */
+
+@media(min-width:600px){
+
+    .services-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .gallery-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .buttons{
+        flex-direction:row;
+        justify-content:center;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<div class="top-header">
+
+<img
+src="images/logo_laura.png"
+class="logo-header"
+alt="Logo Laura">
+
+<div class="brand">
+
+<h3>
+Laura – La PSY De Beauté
+</h3>
+
+<span>
+Beauté • Élégance • Professionnalisme
+</span>
+
+</div>
+
+<button
+class="menu-button"
+onclick="toggleMenu()">
+
+☰
+
+</button>
+
+</div>
+
+
+<nav
+class="mobile-menu"
+id="mobileMenu">
+
+<a href="#accueil">🏠 Accueil</a>
+<a href="#services">💇 Services</a>
+<a href="#galerie">🖼️ Galerie</a>
+<a href="#videos">🎥 Vidéos</a>
+<a href="#audio">🎵 Audio</a>
+<a href="#apropos">👩 À propos</a>
+<a href="#rendezvous">📅 Rendez-vous</a>
+<a href="#contact">📞 Contact</a>
+
+</nav>
+
+</header>
+
+
+<!-- ================= ACCUEIL ================= -->
+
+<section
+class="hero"
+id="accueil">
+
+<div class="hero-content">
+
+<img
+src="images/logo_laura.png"
+class="hero-logo"
+alt="Laura">
+
+<h1 id="heroName">
+
+Laura
+<br>
+La PSY De Beauté
+
+</h1>
+
+
+<div
+class="slogan"
+id="heroSlogan">
+
+Avec La Psy de Beauté, votre satisfaction est notre priorité.
+
+</div>
+
+
+<p class="hero-description">
+
+Coiffure femme • Maquillage • Onglerie
+<br>
+Soins corporels • Beauté
+<br>
+
+<span id="heroLocation">
+Yaoundé – Biteng, Cameroun
+</span>
+
+</p>
+
+
+<div class="buttons">
+
+<a
+href="#rendezvous"
+class="btn btn-gold">
+
+📅 Prendre rendez-vous
+
+</a>
+
+
+<a
+href="https://wa.me/237690277855"
+class="btn btn-whatsapp"
+target="_blank">
+
+💬 WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section
+class="services"
+id="services">
+
+<div class="section-title">
+
+<h2>
+Nos services
+</h2>
+
+<p>
+Des prestations de qualité pour rehausser votre beauté
+</p>
+
+</div>
+
+
+<p class="services-intro">
+
+Nous vous offrons des prestations de qualité pour rehausser votre beauté lors de tous vos événements.
+
+</p>
+
+
+<div class="services-grid">
+
+
+<div class="service-card">
+
+<div class="service-icon">
+💄
+</div>
+
+<h3>
+Maquillage
+</h3>
+
+<p id="serviceMaquillage">
+
+Dot, mariage, soirée, anniversaire, enterrement de vie de jeune fille, shooting… événements et occasions spéciales !
+
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">
+💅🏾
+</div>
+
+<h3>
+Onglerie
+</h3>
+
+<p id="serviceOnglerie">
+
+Vernis permanent sur capsule, construction gel et résine, nail art.
+
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">
+👑
+</div>
+
+<h3>
+Pose perruque
+</h3>
+
+<p id="servicePerruque">
+
+Lace frontale, closure, tissage, chignon, coiffures mariées…
+
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">
+🧖🏾‍♀️
+</div>
+
+<h3>
+Soins corporels
+</h3>
+
+<p id="serviceSoins">
+
+Visage, gommage Hammam, massage, manucure et pédicure chaude…
+
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ================= GALERIE ================= -->
+
+<section
+class="gallery"
+id="galerie">
+
+<div class="section-title">
+
+<h2>
+Galerie
+</h2>
+
+<p>
+Découvrez l'univers de La PSY De Beauté
+</p>
+
+</div>
+
+
+<div class="gallery-grid">
+
+<div class="gallery-item">
+
+<img
+src="images/laura_portrait_1.jpg"
+alt="Laura">
+
+<div class="gallery-caption">
+Laura
+</div>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="images/coiffure1.jpg"
+alt="Coiffure">
+
+<div class="gallery-caption">
+Coiffure
+</div>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="images/coiffure2.jpg"
+alt="Beauté">
+
+<div class="gallery-caption">
+Beauté
+</div>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="images/coiffure3.jpg"
+alt="Réalisation">
+
+<div class="gallery-caption">
+Réalisation
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= VIDEOS ================= -->
+
+<section
+class="videos"
+id="videos">
+
+<div class="section-title">
+
+<h2>
+🎥 Vidéos
+</h2>
+
+<p>
+Découvrez le travail de Laura
+</p>
+
+</div>
+
+
+<div class="video-list">
+
+
+<div class="video-card">
+
+<div class="video-wrapper">
+
+<video
+controls
+playsinline
+webkit-playsinline
+preload="auto"
+controlsList="nodownload"
+poster="images/coiffure1.jpg">
+
+<source
+src="videos/video1.mp4"
+type="video/mp4">
+
+Votre navigateur ne peut pas lire cette vidéo.
+
+</video>
+
+</div>
+
+
+<div class="video-info">
+
+<h3>
+🎬 Réalisation 1
+</h3>
+
+<p>
+Découvrez une réalisation de Laura.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="video-card">
+
+<div class="video-wrapper">
+
+<video
+controls
+playsinline
+webkit-playsinline
+preload="auto"
+controlsList="nodownload"
+poster="images/coiffure2.jpg">
+
+<source
+src="videos/video2.mp4"
+type="video/mp4">
+
+Votre navigateur ne peut pas lire cette vidéo.
+
+</video>
+
+</div>
+
+
+<div class="video-info">
+
+<h3>
+🎬 Réalisation 2
+</h3>
+
+<p>
+Découvrez l'univers beauté de Laura.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ================= AUDIO ================= -->
+
+<section
+class="audio-section"
+id="audio">
+
+<div class="section-title">
+
+<h2>
+🎵 Notre univers musical
+</h2>
+
+<p>
+Découvrez notre ambiance musicale
+</p>
+
+</div>
+
+
+<div class="audio-box">
+
+<div class="audio-icon">
+🎵
+</div>
+
+<h3>
+Musique de La PSY De Beauté
+</h3>
+
+<p>
+Profitez de notre ambiance musicale.
+</p>
+
+<audio controls>
+
+<source
+src="audio/musique.mp3"
+type="audio/mpeg">
+
+Votre navigateur ne supporte pas la lecture audio.
+
+</audio>
+
+</div>
+
+</section>
+
+
+<!-- ================= À PROPOS ================= -->
+
+<section
+class="about"
+id="apropos">
+
+<div class="section-title">
+
+<h2>
+À propos de Laura
+</h2>
+
+</div>
+
+
+<div class="about-box">
+
+<img
+src="images/laura_portrait_1.jpg"
+class="about-photo"
+alt="Laura">
+
+
+<div id="aboutContent">
+
+<p>
+
+<strong class="highlight">
+Laura, connue sous le nom de La PSY De Beauté,
+</strong>
+
+est une professionnelle passionnée par la coiffure femme, le maquillage et l’univers de la beauté (soins corporels).
+
+</p>
+
+
+<p>
+
+Elle propose des prestations adaptées aux événements.
+
+</p>
+
+
+<p>
+
+Son objectif est de mettre en valeur la beauté des clientes et de leur offrir une expérience élégante, inoubliable, professionnelle et personnalisée.
+
+</p>
+
+</div>
+
+
+<p>
+
+<span class="highlight">
+
+Avec La Psy de Beauté, votre satisfaction est notre priorité.
+
+</span>
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ================= RENDEZ-VOUS ================= -->
+
+<section
+class="appointment"
+id="rendezvous">
+
+<div class="section-title">
+
+<h2>
+📅 Prendre rendez-vous
+</h2>
+
+<p>
+Réservez votre moment beauté
+</p>
+
+</div>
+
+
+<div class="appointment-box">
+
+<form
+onsubmit="sendAppointment(event)">
+
+
+<label>
+Votre nom
+</label>
+
+<input
+type="text"
+id="name"
+placeholder="Votre nom"
+required>
+
+
+<label>
+Numéro de téléphone
+</label>
+
+<input
+type="tel"
+id="phone"
+placeholder="Votre numéro"
+required>
+
+
+<label>
+Service souhaité
+</label>
+
+<select
+id="service"
+required>
+
+<option value="">
+Choisissez un service
+</option>
+
+<option>
+Maquillage
+</option>
+
+<option>
+Onglerie
+</option>
+
+<option>
+Pose perruque
+</option>
+
+<option>
+Soins corporels
+</option>
+
+</select>
+
+
+<label>
+Date souhaitée
+</label>
+
+<input
+type="date"
+id="date"
+required>
+
+
+<label>
+Message
+</label>
+
+<textarea
+id="message"
+placeholder="Précisez votre demande..."></textarea>
+
+
+<button
+type="submit"
+class="btn btn-whatsapp submit-btn">
+
+💬 Envoyer sur WhatsApp
+
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section
+class="contact"
+id="contact">
+
+<div class="section-title">
+
+<h2>
+📞 Contact
+</h2>
+
+<p>
+Laura est à votre écoute
+</p>
+
+</div>
+
+
+<div class="contact-card">
+
+
+<div class="contact-item">
+
+<div class="contact-icon">
+📱
+</div>
+
+<div>
+
+<strong>
+Téléphone
+</strong>
+
+<a
+href="tel:+237690277855"
+id="contactPhone">
+
++237 690 277 855
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="contact-item">
+
+<div class="contact-icon">
+💬
+</div>
+
+<div>
+
+<strong>
+WhatsApp
+</strong>
+
+<a
+href="https://wa.me/237690277855"
+target="_blank">
+
+Contacter Laura
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="contact-item">
+
+<div class="contact-icon">
+📧
+</div>
+
+<div>
+
+<strong>
+Email
+</strong>
+
+<a
+href="mailto:ngermainelaura@gmail.com"
+id="contactEmail">
+
+ngermainelaura@gmail.com
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="contact-item">
+
+<div class="contact-icon">
+📍
+</div>
+
+<div>
+
+<strong>
+Localisation
+</strong>
+
+<span id="contactLocation">
+
+Yaoundé – Biteng, Cameroun
+
+</span>
+
+</div>
+
+</div>
+
+
+<div class="contact-item">
+
+<div class="contact-icon">
+🎵
+</div>
+
+<div>
+
+<strong>
+TikTok
+</strong>
+
+<span id="contactTikTok">
+
+@Laura_la_psy_de_beaute
+
+</span>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<h3>
+Laura – La PSY De Beauté
+</h3>
+
+<p>
+Beauté • Élégance • Professionnalisme
+</p>
+
+<br>
+
+<p
+class="footer-slogan"
+id="footerSlogan">
+
+Avec La Psy de Beauté, votre satisfaction est notre priorité.
+
+</p>
+
+<br>
+
+<p>
+© 2026 Laura – La PSY De Beauté
+</p>
+
+</footer>
+
+
+<!-- ================= WHATSAPP ================= -->
+
+<a
+class="whatsapp-floating"
+href="https://wa.me/237690277855"
+target="_blank">
+
+💬
+
+</a>
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav class="bottom-nav">
+
+<a href="#accueil">
+<div>🏠</div>
+Accueil
+</a>
+
+<a href="#services">
+<div>💇</div>
+Services
+</a>
+
+<a href="#galerie">
+<div>🖼️</div>
+Galerie
+</a>
+
+<a href="#rendezvous">
+<div>📅</div>
+RDV
+</a>
+
+<a href="#contact">
+<div>📞</div>
+Contact
+</a>
+
+</nav>
+
+
+<script>
+
+/* ================= MENU ================= */
+
+function toggleMenu(){
+
+    document
+    .getElementById("mobileMenu")
+    .classList.toggle("active");
+
+}
+
+
+/* ================= ADMIN ================= */
+
+function loadAdminData(){
+
+    const nom =
+    localStorage.getItem("laura_nom");
+
+    if(nom){
+
+        const element =
+        document.getElementById("heroName");
+
+        const parts =
+        nom.split("–");
+
+        if(parts.length > 1){
+
+            element.innerHTML =
+            parts[0].trim() +
+            "<br>" +
+            parts.slice(1)
+            .join("–")
+            .trim();
+
+        }else{
+
+            element.textContent =
+            nom;
+
+        }
+
+    }
+
+
+    const slogan =
+    localStorage.getItem("laura_slogan");
+
+    if(slogan){
+
+        document
+        .getElementById("heroSlogan")
+        .textContent = slogan;
+
+        document
+        .getElementById("footerSlogan")
+        .textContent = slogan;
+
+    }
+
+
+    const ville =
+    localStorage.getItem("laura_ville");
+
+    if(ville){
+
+        document
+        .getElementById("heroLocation")
+        .textContent = ville;
+
+        document
+        .getElementById("contactLocation")
+        .textContent = ville;
+
+    }
+
+
+    const telephone =
+    localStorage.getItem("laura_telephone");
+
+    if(telephone){
+
+        const phone =
+        document.getElementById("contactPhone");
+
+        phone.textContent =
+        telephone;
+
+        phone.href =
+        "tel:" +
+        telephone.replace(/\s/g,"");
+
+    }
+
+
+    const email =
+    localStorage.getItem("laura_email");
+
+    if(email){
+
+        const element =
+        document.getElementById("contactEmail");
+
+        element.textContent =
+        email;
+
+        element.href =
+        "mailto:" + email;
+
+    }
+
+
+    const tiktok =
+    localStorage.getItem("laura_tiktok");
+
+    if(tiktok){
+
+        document
+        .getElementById("contactTikTok")
+        .textContent = tiktok;
+
+    }
+
+
+    const maquillage =
+    localStorage.getItem("service_maquillage");
+
+    if(maquillage){
+
+        document
+        .getElementById("serviceMaquillage")
+        .textContent = maquillage;
+
+    }
+
+
+    const onglerie =
+    localStorage.getItem("service_onglerie");
+
+    if(onglerie){
+
+        document
+        .getElementById("serviceOnglerie")
+        .textContent = onglerie;
+
+    }
+
+
+    const perruque =
+    localStorage.getItem("service_perruque");
+
+    if(perruque){
+
+        document
+        .getElementById("servicePerruque")
+        .textContent = perruque;
+
+    }
+
+
+    const soins =
+    localStorage.getItem("service_soins");
+
+    if(soins){
+
+        document
+        .getElementById("serviceSoins")
+        .textContent = soins;
+
+    }
+
+
+    const about =
+    localStorage.getItem("laura_about");
+
+    if(about){
+
+        document
+        .getElementById("aboutContent")
+        .innerHTML =
+        "<p>" +
+        about +
+        "</p>";
+
+    }
+
+}
+
+
+/* ================= RENDEZ-VOUS ================= */
+
+function sendAppointment(event){
+
+    event.preventDefault();
+
+    const name =
+    document.getElementById("name").value;
+
+    const phone =
+    document.getElementById("phone").value;
+
+    const service =
+    document.getElementById("service").value;
+
+    const date =
+    document.getElementById("date").value;
+
+    const message =
+    document.getElementById("message").value;
+
+
+    const text =
+    "Bonjour Laura, je souhaite prendre un rendez-vous.\n\n" +
+
+    "👤 Nom : " + name +
+    "\n📱 Téléphone : " + phone +
+    "\n💇 Service : " + service +
+    "\n📅 Date : " + date +
+    "\n📝 Message : " + message;
+
+
+    window.open(
+        "https://wa.me/237690277855?text=" +
+        encodeURIComponent(text),
+        "_blank"
+    );
+
+}
+
+
+/* ================= SERVICE WORKER ================= */
+
+if("serviceWorker" in navigator){
+
+    window.addEventListener(
+        "load",
+        function(){
+
+            navigator.serviceWorker
+            .register("./sw.js")
+            .then(function(){
+
+                console.log(
+                    "La PSY De Beauté est prête."
+                );
+
+            })
+            .catch(function(error){
+
+                console.log(
+                    "Service Worker :",
+                    error
+                );
+
+            });
+
+        }
+    );
+
+}
+
+
+/* ================= CHARGEMENT ================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function(){
+
+        loadAdminData();
+
+    }
+);
+
+</script>
+
+
+</body>
+</html>

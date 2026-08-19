@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#000000">
+
+<title>Gestion – La PSY De Beauté</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#000;
+    color:#fff;
+    padding-bottom:30px;
+}
+
+:root{
+    --black:#000;
+    --dark:#111;
+    --dark2:#181818;
+    --gold:#d4af37;
+    --gold-light:#f5d76e;
+    --pink:#ff69b4;
+    --gray:#aaa;
+    --green:#25D366;
+}
+
+/* HEADER */
+
+header{
+    background:#000;
+    border-bottom:1px solid rgba(212,175,55,.5);
+    padding:18px;
+    text-align:center;
+}
+
+header img{
+    width:75px;
+    height:75px;
+    object-fit:cover;
+    border-radius:50%;
+    border:2px solid var(--gold);
+    margin-bottom:10px;
+}
+
+header h1{
+    color:var(--gold);
+    font-size:23px;
+}
+
+header p{
+    color:var(--pink);
+    font-size:13px;
+    margin-top:4px;
+}
+
+/* CONTAINER */
+
+.container{
+    width:100%;
+    max-width:700px;
+    margin:auto;
+    padding:20px;
+}
+
+/* CARDS */
+
+.card{
+    background:linear-gradient(145deg,#181818,#080808);
+    border:1px solid #292929;
+    border-radius:17px;
+    padding:20px;
+    margin-bottom:18px;
+}
+
+.card h2{
+    color:var(--gold);
+    font-size:20px;
+    margin-bottom:7px;
+}
+
+.card p{
+    color:#aaa;
+    font-size:13px;
+    margin-bottom:18px;
+}
+
+/* INPUTS */
+
+label{
+    display:block;
+    color:var(--gold);
+    font-size:13px;
+    margin:14px 0 6px;
+}
+
+input,
+textarea,
+select{
+    width:100%;
+    background:#050505;
+    color:#fff;
+    border:1px solid #333;
+    border-radius:9px;
+    padding:13px;
+    outline:none;
+    font-size:14px;
+}
+
+textarea{
+    min-height:110px;
+    resize:vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+    border-color:var(--gold);
+}
+
+/* BUTTONS */
+
+button,
+.btn{
+    display:inline-block;
+    border:none;
+    border-radius:25px;
+    padding:13px 18px;
+    font-weight:bold;
+    cursor:pointer;
+    text-decoration:none;
+    font-size:14px;
+}
+
+.btn-gold{
+    background:var(--gold);
+    color:#000;
+}
+
+.btn-pink{
+    background:var(--pink);
+    color:#000;
+}
+
+.btn-green{
+    background:var(--green);
+    color:#fff;
+}
+
+.btn-dark{
+    background:#292929;
+    color:#fff;
+}
+
+.full{
+    width:100%;
+    margin-top:15px;
+}
+
+/* PREVIEW */
+
+.preview{
+    background:#050505;
+    border:1px solid #333;
+    border-radius:12px;
+    padding:15px;
+    margin-top:15px;
+}
+
+.preview-title{
+    color:var(--pink);
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+.preview-text{
+    color:#ddd;
+    white-space:pre-wrap;
+    font-size:14px;
+}
+
+/* MESSAGE */
+
+.message{
+    display:none;
+    margin-top:15px;
+    padding:12px;
+    border-radius:9px;
+    background:#102817;
+    border:1px solid #25D366;
+    color:#8ff0ae;
+    font-size:13px;
+}
+
+.message.show{
+    display:block;
+}
+
+/* INFO */
+
+.info{
+    border-left:3px solid var(--pink);
+    padding:12px;
+    background:#171017;
+    border-radius:7px;
+    color:#ddd;
+    font-size:13px;
+    margin-top:10px;
+}
+
+.warning{
+    border-left:3px solid var(--gold);
+    padding:12px;
+    background:#17140a;
+    border-radius:7px;
+    color:#ddd;
+    font-size:13px;
+    margin-top:10px;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    color:#777;
+    font-size:12px;
+    padding:20px;
+}
+
+footer strong{
+    color:var(--gold);
+}
+
+</style>
+</head>
+
+<body>
+
+
+<header>
+
+    <img
+        src="images/logo_laura.png"
+        alt="Logo Laura">
+
+    <h1>
+        Espace de gestion
+    </h1>
+
+    <p>
+        Laura – La PSY De Beauté
+    </p>
+
+</header>
+
+
+<div class="container">
+
+
+    <!-- INFORMATIONS -->
+
+    <div class="card">
+
+        <h2>
+            ✏️ Informations générales
+        </h2>
+
+        <p>
+            Modifie ici les informations affichées
+            dans ton espace de gestion.
+        </p>
+
+
+        <label for="nom">
+            Nom de l'activité
+        </label>
+
+        <input
+            type="text"
+            id="nom"
+            value="Laura – La PSY De Beauté">
+
+
+        <label for="slogan">
+            Slogan
+        </label>
+
+        <textarea
+            id="slogan">Avec La Psy de Beauté, votre satisfaction est notre priorité.</textarea>
+
+
+        <label for="ville">
+            Localisation
+        </label>
+
+        <input
+            type="text"
+            id="ville"
+            value="Yaoundé – Biteng, Cameroun">
+
+
+        <button
+            class="btn btn-gold full"
+            onclick="previewInfo()">
+
+            👁️ Prévisualiser
+
+        </button>
+
+
+        <div
+            class="preview"
+            id="infoPreview"
+            style="display:none;">
+
+            <div class="preview-title">
+                Aperçu
+            </div>
+
+            <div
+                class="preview-text"
+                id="previewContent">
+            </div>
+
+        </div>
+
+
+        <div
+            class="message"
+            id="saveMessage">
+
+            ✅ Informations enregistrées sur cet appareil.
+
+        </div>
+
+    </div>
+
+
+    <!-- CONTACT -->
+
+    <div class="card">
+
+        <h2>
+            📞 Coordonnées
+        </h2>
+
+        <p>
+            Informations de contact de Laura.
+        </p>
+
+
+        <label>
+            Téléphone / WhatsApp
+        </label>
+
+        <input
+            type="tel"
+            id="telephone"
+            value="+237 690 277 855">
+
+
+        <label>
+            Email
+        </label>
+
+        <input
+            type="email"
+            id="email"
+            value="ngermainelaura@gmail.com">
+
+
+        <label>
+            TikTok
+        </label>
+
+        <input
+            type="text"
+            id="tiktok"
+            value="@Laura_la_psy_de_beaute">
+
+
+        <button
+            class="btn btn-green full"
+            onclick="saveContact()">
+
+            💾 Enregistrer les coordonnées
+
+        </button>
+
+
+        <div
+            class="message"
+            id="contactMessage">
+
+            ✅ Coordonnées enregistrées.
+
+        </div>
+
+    </div>
+
+
+    <!-- SERVICES -->
+
+    <div class="card">
+
+        <h2>
+            💇 Services
+        </h2>
+
+        <p>
+            Les services actuellement présentés par Laura.
+        </p>
+
+
+        <label>
+            💄 Maquillage
+        </label>
+
+        <textarea
+            id="maquillage">Dot, mariage, soirée, anniversaire, enterrement de vie de jeune fille, shooting… événements et occasions spéciales !</textarea>
+
+
+        <label>
+            💅🏾 Onglerie
+        </label>
+
+        <textarea
+            id="onglerie">Vernis permanent sur capsule, construction gel et résine, nail art.</textarea>
+
+
+        <label>
+            👑 Pose perruque
+        </label>
+
+        <textarea
+            id="perruque">Lace frontale, closure, tissage, chignon, coiffures mariées…</textarea>
+
+
+        <label>
+            🧖🏾‍♀️ Soins corporels
+        </label>
+
+        <textarea
+            id="soins">Visage, gommage, Hammam, massage, manucure et pédicure chaude…</textarea>
+
+
+        <button
+            class="btn btn-gold full"
+            onclick="saveServices()">
+
+            💾 Enregistrer les services
+
+        </button>
+
+
+        <div
+            class="message"
+            id="servicesMessage">
+
+            ✅ Services enregistrés.
+
+        </div>
+
+    </div>
+
+
+    <!-- À PROPOS -->
+
+    <div class="card">
+
+        <h2>
+            👩 À propos de Laura
+        </h2>
+
+        <p>
+            Texte de présentation de Laura.
+        </p>
+
+
+        <textarea
+            id="aboutText"
+            style="min-height:180px;">Laura, connue sous le nom de La PSY De Beauté, est une professionnelle passionnée par la coiffure femme, le maquillage et l’univers de la beauté (soins corporels). Elle propose des prestations adaptées aux événements. Son objectif est de mettre en valeur la beauté des clientes et de leur offrir une expérience élégante, inoubliable, professionnelle et personnalisée.</textarea>
+
+
+        <button
+            class="btn btn-pink full"
+            onclick="saveAbout()">
+
+            💾 Enregistrer la présentation
+
+        </button>
+
+
+        <div
+            class="message"
+            id="aboutMessage">
+
+            ✅ Présentation enregistrée.
+
+        </div>
+
+    </div>
+
+
+    <!-- MÉDIAS -->
+
+    <div class="card">
+
+        <h2>
+            📸 Gestion des médias
+        </h2>
+
+        <p>
+            Les fichiers actuellement utilisés par l'application.
+        </p>
+
+
+        <div class="info">
+
+            📷 Images :
+            <br><br>
+
+            logo_laura.png
+            <br>
+            laura_portrait_1.jpg
+            <br>
+            coiffure1.jpg
+            <br>
+            coiffure2.jpg
+            <br>
+            coiffure3.jpg
+
+        </div>
+
+
+        <div class="info">
+
+            🎥 Vidéos :
+            <br><br>
+
+            video1.mp4
+            <br>
+            video2.mp4
+
+        </div>
+
+
+        <div class="info">
+
+            🎵 Audio :
+            <br><br>
+
+            musique.mp3
+
+        </div>
+
+
+        <div class="warning">
+
+            ⚠️ Pour l'instant, ne supprime aucun fichier
+            dans les dossiers images, videos ou audio.
+            Ils sont utilisés par l'application.
+
+        </div>
+
+    </div>
+
+
+    <!-- OUVRIR APPLICATION -->
+
+    <div class="card">
+
+        <h2>
+            📱 Application
+        </h2>
+
+        <p>
+            Retourner à l'application principale.
+        </p>
+
+
+        <a
+            href="index.html"
+            class="btn btn-gold full">
+
+            🏠 Ouvrir l'application
+
+        </a>
+
+    </div>
+
+
+</div>
+
+
+<footer>
+
+    <strong>
+        Laura – La PSY De Beauté
+    </strong>
+
+    <br><br>
+
+    Espace de gestion local
+
+</footer>
+
+
+<script>
+
+/* =========================================================
+   PRÉVISUALISATION
+========================================================= */
+
+function previewInfo(){
+
+    const nom =
+        document.getElementById("nom").value;
+
+    const slogan =
+        document.getElementById("slogan").value;
+
+    const ville =
+        document.getElementById("ville").value;
+
+    const content =
+        nom +
+        "\n\n" +
+        slogan +
+        "\n\n📍 " +
+        ville;
+
+    document.getElementById(
+        "previewContent"
+    ).textContent = content;
+
+    document.getElementById(
+        "infoPreview"
+    ).style.display = "block";
+
+    localStorage.setItem(
+        "laura_nom",
+        nom
+    );
+
+    localStorage.setItem(
+        "laura_slogan",
+        slogan
+    );
+
+    localStorage.setItem(
+        "laura_ville",
+        ville
+    );
+
+    showMessage(
+        "saveMessage"
+    );
+
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+function saveContact(){
+
+    const telephone =
+        document.getElementById("telephone").value;
+
+    const email =
+        document.getElementById("email").value;
+
+    const tiktok =
+        document.getElementById("tiktok").value;
+
+
+    localStorage.setItem(
+        "laura_telephone",
+        telephone
+    );
+
+    localStorage.setItem(
+        "laura_email",
+        email
+    );
+
+    localStorage.setItem(
+        "laura_tiktok",
+        tiktok
+    );
+
+
+    showMessage(
+        "contactMessage"
+    );
+
+}
+
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+function saveServices(){
+
+    localStorage.setItem(
+        "service_maquillage",
+        document.getElementById("maquillage").value
+    );
+
+    localStorage.setItem(
+        "service_onglerie",
+        document.getElementById("onglerie").value
+    );
+
+    localStorage.setItem(
+        "service_perruque",
+        document.getElementById("perruque").value
+    );
+
+    localStorage.setItem(
+        "service_soins",
+        document.getElementById("soins").value
+    );
+
+
+    showMessage(
+        "servicesMessage"
+    );
+
+}
+
+
+/* =========================================================
+   À PROPOS
+========================================================= */
+
+function saveAbout(){
+
+    const text =
+        document.getElementById("aboutText").value;
+
+    localStorage.setItem(
+        "laura_about",
+        text
+    );
+
+
+    showMessage(
+        "aboutMessage"
+    );
+
+}
+
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+function showMessage(id){
+
+    const element =
+        document.getElementById(id);
+
+    element.classList.add("show");
+
+
+    setTimeout(
+        function(){
+
+            element.classList.remove("show");
+
+        },
+        3000
+    );
+
+}
+
+
+/* =========================================================
+   CHARGER LES INFORMATIONS EXISTANTES
+========================================================= */
+
+window.addEventListener(
+    "DOMContentLoaded",
+    function(){
+
+        const nom =
+            localStorage.getItem("laura_nom");
+
+        const slogan =
+            localStorage.getItem("laura_slogan");
+
+        const ville =
+            localStorage.getItem("laura_ville");
+
+        const telephone =
+            localStorage.getItem("laura_telephone");
+
+        const email =
+            localStorage.getItem("laura_email");
+
+        const tiktok =
+            localStorage.getItem("laura_tiktok");
+
+        const maquillage =
+            localStorage.getItem("service_maquillage");
+
+        const onglerie =
+            localStorage.getItem("service_onglerie");
+
+        const perruque =
+            localStorage.getItem("service_perruque");
+
+        const soins =
+            localStorage.getItem("service_soins");
+
+        const about =
+            localStorage.getItem("laura_about");
+
+
+        if(nom)
+            document.getElementById("nom").value = nom;
+
+        if(slogan)
+            document.getElementById("slogan").value = slogan;
+
+        if(ville)
+            document.getElementById("ville").value = ville;
+
+        if(telephone)
+            document.getElementById("telephone").value = telephone;
+
+        if(email)
+            document.getElementById("email").value = email;
+
+        if(tiktok)
+            document.getElementById("tiktok").value = tiktok;
+
+        if(maquillage)
+            document.getElementById("maquillage").value = maquillage;
+
+        if(onglerie)
+            document.getElementById("onglerie").value = onglerie;
+
+        if(perruque)
+            document.getElementById("perruque").value = perruque;
+
+        if(soins)
+            document.getElementById("soins").value = soins;
+
+        if(about)
+            document.getElementById("aboutText").value = about;
+
+    }
+);
+
+</script>
+
+
+</body>
+</html>
